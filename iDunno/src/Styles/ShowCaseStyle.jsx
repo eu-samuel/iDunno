@@ -11,29 +11,34 @@ export const ShowcaseStyle = styled.div`
         align-items: center;
         padding: 1rem;
         border-radius: 10px;
-        gap: 2vw;
         width: 25vw;
-        height: 60vh;
+        min-height: 60vh;
         margin: 0 auto;
         margin-top: 1vw;
     }
+       
+`
 
-    .card{
-        width: 10vw;
-        height: 30vh;
+export const Card = styled.div`
+    
+        width: 22vw;
+        height: 5vh;
         border-radius: 8px;
         background-color: #171717;
         color: white;
+        margin: 0 auto;
         display: flex;
+        gap: 5vh;
+        margin-top: 1vh;
         padding: 1rem;
         align-items: center;
-        flex-direction: column;
-        gap: 1vh;
         font-weight: 700;
+        span{width: 100%;}
 
         img{
-            width: 9vw;
-            height: 9vw;
+            width: 3vw;
+            height: 3vw;
+            border-radius: .5rem;
         }
 
         button{ 
@@ -43,5 +48,38 @@ export const ShowcaseStyle = styled.div`
             cursor: pointer;
             :active{transform: scale(0.97)}}
             #btn{width: 8vw; height: 6vh;}
-    }
+
+`
+
+export const TrackCard = styled.div`
+    
+        width: 22vw;
+        height: 5vh;
+        border-radius: 8px;
+        background-color: #171717;
+        color: white;
+        margin: 0 auto;
+        display: flex;
+        gap: 5vh;
+        margin-top: 1vh;
+        font-size: 14px;
+        padding: 1rem;
+        align-items: center;
+        font-weight: 700;
+        span{width: 245vw;}
+
+        img{
+            width: 3vw;
+            height: 3vw;
+            border-radius: .5rem;
+        }
+
+        button{ 
+            background-color: black;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            :active{transform: scale(0.97)}}
+            #btn{width: 8vw; height: 6vh;}
+
 `

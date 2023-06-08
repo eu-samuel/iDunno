@@ -17,7 +17,24 @@ export const MainStyle = styled.section`
     margin-left: 2vw;
   }
   
-  input {
+  #credits{font-family: "Montserrat", sans-serif;}
+`;
+
+export const Button = styled.button`
+    color: #302f2f;
+    font-weight: 700;
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    right: 3vw;
+    cursor: pointer;
+    :active{
+      transform: scale(0.91)
+    }
+`
+
+export const Input = styled.input`
     width: 24vw;
     height: 4vh;
     font-size: 15px;
@@ -26,16 +43,4 @@ export const MainStyle = styled.section`
     color: black;
     border: none;
     padding-left: 1vw;
-  }
-
-  #main-btn {
-    color: #302f2f;
-    font-weight: 700;
-    font-size: 18px;
-    position: relative;
-    right: 2.5vw;
-    cursor: pointer;
-  }
-
-  #credits{font-family: "Montserrat", sans-serif;}
-`;
+`

@@ -9,10 +9,7 @@ export const MainStyle = styled.section`
   align-items: center;
   gap: 2vh;
   min-height: 80vh;
-  
-  @media only screen and (min-width : 320px) and (max-width : 480px) {
-    padding-bottom: 2vh;
-  }
+  padding-bottom: 2vh;
 
 `;
 

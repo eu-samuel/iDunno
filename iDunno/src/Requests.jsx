@@ -8,7 +8,7 @@ export const requestArtists = async (artist, setState, isLoading) => {
         q: artist,
         type: "artists",
         offset: '0',
-        limit: 10,
+        limit: 25,
         numberOfTopResults: '5'
       },
       headers: {
@@ -36,7 +36,7 @@ export const requestArtists = async (artist, setState, isLoading) => {
         q: track,
         type: "tracks",
         offset: '0',
-        limit: 10,
+        limit: 25,
         numberOfTopResults: '5'
       },
       headers: {
@@ -64,7 +64,7 @@ export const requestArtists = async (artist, setState, isLoading) => {
         q: album,
         type: "albums",
         offset: '0',
-        limit: 10,
+        limit: 25,
         numberOfTopResults: '5'
       },
       headers: {

@@ -56,7 +56,7 @@ import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
             <Input 
                 value={search3} 
                 onChange={(e) => setSearch3(e.target.value)} 
-                placeholder="Busque sua faixa aqui"
+                placeholder="Busque sua música aqui"
                 onKeyPress={(e) => handleEnter3(e)}
             />
         <Button>

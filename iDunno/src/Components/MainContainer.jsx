@@ -33,7 +33,7 @@ export const MainContainer = () => {
   }
 
   const searches = [search1, setSearch1, search2, setSearch2, search3, setSearch3]
-  const content = [artists, albums, tracks]
+  const content = [artists, setArtists, albums, setAlbums, tracks, setTracks]
   const loaders = [isLoading1, setIsLoading1, isLoading2, setIsLoading2, isLoading3, setIsLoading3]
   const handlers = [handleEnter1, handleEnter2, handleEnter3]
 

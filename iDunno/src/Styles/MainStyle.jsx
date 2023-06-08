@@ -20,14 +20,15 @@ export const Button = styled.button`
     border: none;
     font-size: 18px;
     position: relative;
-    right: 5vw;
+    right: 2.5vw;
+    top: .4vh;
     cursor: pointer;
     :active{
       transform: scale(0.91)
     }
 
     @media only screen and (min-width : 320px) and (max-width : 480px) {
-      left: 36vw;
+      right: 6vw;
       bottom: 3.5vh;
     }
 `
@@ -45,6 +46,8 @@ export const Input = styled.input`
     
     @media only screen and (min-width : 320px) and (max-width : 480px) {
       padding-left: 3vw;
-      width: 80vw;
+      width: 85vw;
+      position: relative;
+      left: 3vw;
     }
 `

@@ -16,7 +16,6 @@ export const ShowcaseStyle = styled.div`
         margin: 0 auto;
         margin-top: 1vw;
     }
-
     .container{
         display: flex;
         flex-direction: column;
@@ -28,6 +27,7 @@ export const ShowcaseStyle = styled.div`
     gap: 5vh;
     flex-direction: column;
     .showcase{width: 82vw;}
+    .container{gap: 2vh;}
 }
        
 `

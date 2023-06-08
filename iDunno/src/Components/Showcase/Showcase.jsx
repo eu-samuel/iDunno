@@ -16,6 +16,7 @@ import { BsSearch } from 'react-icons/bs'
         <ShowcaseStyle>
 
         <div className="container">
+        <div className="search">
             <Input 
                 value={search1} 
                 onChange={(e) => setSearch1(e.target.value)} 
@@ -25,6 +26,7 @@ import { BsSearch } from 'react-icons/bs'
         <Button>
             <BsSearch onClick={() => requestArtists(search1, setArtists, setIsLoading1)}/>
         </Button>
+        </div>
 
         <div className="showcase">
             {isLoading1 ? <Loading/> : <ArtistsContainer artists = {artists}/>}
@@ -32,6 +34,7 @@ import { BsSearch } from 'react-icons/bs'
     </div>
 
     <div className="container">
+    <div className="search">
             <Input 
                 value={search2} 
                 onChange={(e) => setSearch2(e.target.value)} 
@@ -41,12 +44,14 @@ import { BsSearch } from 'react-icons/bs'
         <Button>
             <BsSearch onClick={() => requestAlbums(search2, setAlbums, setIsLoading2)}/>
         </Button>
+        </div>
         <div className="showcase">
             {isLoading2 ? <Loading/> :  <AlbumsContainer albums = {albums}/>}
         </div>
         </div>
                   
         <div className="container">
+        <div className="search">
             <Input 
                 value={search3} 
                 onChange={(e) => setSearch3(e.target.value)} 
@@ -56,7 +61,7 @@ import { BsSearch } from 'react-icons/bs'
         <Button>
             <BsSearch onClick={() => requestTracks(search3, setTracks, setIsLoading3)}/>
         </Button>
-
+        </div>
         <div className="showcase">
             {isLoading3 ? <Loading/> : <TracksContainer tracks = {tracks}/>}
         </div>

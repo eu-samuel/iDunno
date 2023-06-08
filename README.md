@@ -26,7 +26,7 @@ A aplicação poderá ser acessada pelo usuário através da plataforma surge, s
 
 <h3>Músicas carregadas</h3>
 
-<img src="https://i.ibb.co/DMcCzrN/image.png" alt="iDunno-tracks"></img>
+<img src="https://i.ibb.co/RhJXBSz/image.png" alt="iDunno-tracks"></img>
 
 <h1>Versão mobile </h1>
 

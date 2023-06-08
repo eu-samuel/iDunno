@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const requestArtists = async (artist, setState) => {
+export const requestArtists = async (artist, setState, isLoading) => {
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',
@@ -18,14 +18,17 @@ export const requestArtists = async (artist, setState) => {
     };
     
     try {
+      isLoading(true)
       const response = await axios.request(options);
       setState(response.data.artists.items);
+      isLoading(false)
     } catch (error) {
-      console.error(error);
+      alert(error);
+      isLoading(false)
     }
   }
 
-  export const requestTracks = async (track, setState) => {
+  export const requestTracks = async (track, setState, isLoading) => {
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',
@@ -43,14 +46,17 @@ export const requestArtists = async (artist, setState) => {
     };
     
     try {
+      isLoading(true)
       const response = await axios.request(options);
       setState(response.data.tracks.items);
+      isLoading(false)
     } catch (error) {
-      console.error(error);
+      alert(error);
+      isLoading(false)
     }
   }
 
-  export const requestAlbums = async (album, setState) => {
+  export const requestAlbums = async (album, setState, isLoading) => {
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',
@@ -68,9 +74,12 @@ export const requestArtists = async (artist, setState) => {
     };
     
     try {
+      isLoading(true)
       const response = await axios.request(options);
       setState(response.data.albums.items);
+      isLoading(false)
     } catch (error) {
-      console.error(error);
+      alert(error);
+      isiLoading(false)
     }
   }

@@ -2,22 +2,18 @@ import styled from "styled-components";
 
 export const MainStyle = styled.section`
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
   margin-top: 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
-
-  .search {
-    width: 90vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    margin-left: 2vw;
-  }
+  min-height: 80vh;
   
-  #credits{font-family: "Montserrat", sans-serif;}
+  @media only screen and (min-width : 320px) and (max-width : 480px) {
+    padding-bottom: 2vh;
+  }
+
 `;
 
 export const Button = styled.button`
@@ -27,15 +23,20 @@ export const Button = styled.button`
     border: none;
     font-size: 18px;
     position: relative;
-    right: 3vw;
+    right: 5vw;
     cursor: pointer;
     :active{
       transform: scale(0.91)
     }
+
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+      left: 36vw;
+      bottom: 3.5vh;
+    }
 `
 
 export const Input = styled.input`
-    width: 24vw;
+    width: 25vw;
     height: 4vh;
     font-size: 15px;
     border-radius: 10px;
@@ -43,4 +44,10 @@ export const Input = styled.input`
     color: black;
     border: none;
     padding-left: 1vw;
+
+    
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+      padding-left: 3vw;
+      width: 80vw;
+    }
 `

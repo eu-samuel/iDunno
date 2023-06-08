@@ -3,11 +3,12 @@ import { ArtistsContainer, AlbumsContainer, TracksContainer } from "./Containers
 import { Loading } from '../Showcase/IsLoading';
 import { Input, Button } from "../../Styles/MainStyle";
 import { BsSearch } from 'react-icons/bs'
+import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
 
   export const Showcase = (props) => {
   
     const [search1, setSearch1, search2, setSearch2, search3, setSearch3] = props.searches
-    const [artists, albums, tracks] = props.content
+    const [artists, setArtists, albums, setAlbums, tracks, setTracks] = props.content
     const [isLoading1, setIsLoading1, isLoading2, setIsLoading2, isLoading3, setIsLoading3] = props.loaders
     const [handleEnter1, handleEnter2, handleEnter3] = props.handlers
 

@@ -10,7 +10,6 @@ export const MainStyle = styled.section`
   gap: 2vh;
   min-height: 80vh;
   padding-bottom: 2vh;
-
 `;
 
 export const Button = styled.button`
@@ -39,14 +38,14 @@ export const Input = styled.input`
     font-size: 15px;
     border-radius: 10px;
     background-color: white;
-    color: black;
+    color: #000000;
     border: none;
     padding-left: 1vw;
 
     
     @media only screen and (min-width : 320px) and (max-width : 480px) {
       padding-left: 3vw;
-      width: 85vw;
+      width: 75vw;
       position: relative;
       left: 3vw;
     }

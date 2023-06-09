@@ -22,12 +22,39 @@ export const ShowcaseStyle = styled.div`
         align-items: center;
     }
 
+    .search{
+        display: flex; 
+        margin-left: 1vw;
+        font-size: 20px;
+        align-items: center;
+        #clear{
+        cursor: pointer;    
+        position: relative;
+        right: .5vw;}
+
+    }
+
+
     @media only screen and (min-width : 320px) and (max-width : 480px) {
     
     gap: 5vh;
     flex-direction: column;
-    .showcase{width: 82vw;}
+    .showcase{
+        width: 82vw;
+        min-height: 20vh;
+    }
     .container{gap: 2vh;}
+    .search{
+        display: flex; 
+        margin-left: 0;
+        justify-content: center;
+        font-size: 20px;
+        align-items: center;
+        #clear{
+        cursor: pointer;    
+        right: 2vw;}
+
+    }
 }
        
 `

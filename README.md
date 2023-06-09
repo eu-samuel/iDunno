@@ -2,7 +2,7 @@
 
 <h1>Sobre</h1>
 
-iDunno é um projeto feito em React.js através do consumo da Spotify API. Em uma única página, o usuário poderá conferir 25 artistas, álbuns ou músicas com base no que for pesquisado por ele em um dos três inputs disponíveis. Também é possível se redirecionar até a página do artista no site do Spotify ou programa/aplicativo caso o usuário tenha instalado em seu desktop/smartphone.
+iDunno é um projeto feito em React.js através do consumo da Spotify API. Em uma única página, o usuário poderá conferir 25 artistas, álbuns ou músicas com base no que for pesquisado por ele em um dos três inputs disponíveis. Também é possível se redirecionar até a página do artista no site do Spotify ou programa/aplicativo caso o usuário tenha instalado em seu desktop/smartphone. O botão da lixeira irá limpar tanto o input específico quanto o container.
 
 O nome iDunno vem de "I don't know", frase em inglês que significa "eu não sei/não conheço". É uma referência a proposta do projeto em exibir novo conteúdo musical do ponto de vista de cada usuário.
 
@@ -14,19 +14,19 @@ A aplicação poderá ser acessada pelo usuário através da plataforma surge, s
    
 <h3>Página simples</h3>
 
-<img src="https://i.ibb.co/D5Sh5Pf/image.png" alt="iDunno-simple"></img>
+<img src="https://i.ibb.co/RShxqDg/image.png" alt="iDunno-simple"></img>
 
 <h3>Artistas carregados</h3>
 
-<img src="https://i.ibb.co/NFvYJfr/image.png" alt="iDunno-artists"></img>
+<img src="https://i.ibb.co/KbzYK06/image.png" alt="iDunno-artists"></img>
 
 <h3>Álbuns carregados</h3>
 
-<img src="https://i.ibb.co/DMcCzrN/image.png" alt="iDunno-albums"></img>
+<img src="https://i.ibb.co/VVCr55Q/image.png" alt="iDunno-albums"></img>
 
 <h3>Músicas carregadas</h3>
 
-<img src="https://i.ibb.co/RhJXBSz/image.png" alt="iDunno-tracks"></img>
+<img src="https://i.ibb.co/6DwrNgg/image.png" alt="iDunno-tracks"></img>
 
 <h1>Versão mobile </h1>
 

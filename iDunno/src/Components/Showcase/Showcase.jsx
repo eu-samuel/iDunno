@@ -2,7 +2,7 @@ import { ShowcaseStyle } from "../../Styles/ShowCaseStyle"
 import { ArtistsContainer, AlbumsContainer, TracksContainer } from "./Containers";
 import { Loading } from '../Showcase/IsLoading';
 import { Input, Button } from "../../Styles/MainStyle";
-import { BsSearch } from 'react-icons/bs'
+import { BsTrash, BsSearch } from 'react-icons/bs'
 import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
 
   export const Showcase = (props) => {
@@ -12,6 +12,11 @@ import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
     const [isLoading1, setIsLoading1, isLoading2, setIsLoading2, isLoading3, setIsLoading3] = props.loaders
     const [handleEnter1, handleEnter2, handleEnter3] = props.handlers
 
+
+    const clearStuff = (setInput, setState) => {
+        setInput("")
+        setState("")
+    }
     
     return (
         <ShowcaseStyle>
@@ -25,8 +30,9 @@ import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
                 onKeyPress={(e) => handleEnter1(e)}
             />
         <Button>
-            <BsSearch onClick={() => requestArtists(search1, setArtists, setIsLoading1)}/>
+            <BsSearch onClick={() => requestArtists(search1, setArtists, setSearch1, setIsLoading1)}/>
         </Button>
+        <BsTrash id="clear" onClick={() => clearStuff(setSearch1, setArtists)}/>
         </div>
 
         <div className="showcase">
@@ -43,9 +49,11 @@ import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
                 onKeyPress={(e) => handleEnter2(e)}
             />
         <Button>
-            <BsSearch onClick={() => requestAlbums(search2, setAlbums, setIsLoading2)}/>
+            <BsSearch onClick={() => requestAlbums(search2, setAlbums, setSearch2, setIsLoading2)}/>
         </Button>
+        <BsTrash id="clear" onClick={() => clearStuff(setSearch2, setAlbums)}/>
         </div>
+
         <div className="showcase">
             {isLoading2 ? <Loading/> :  <AlbumsContainer albums = {albums}/>}
         </div>
@@ -60,9 +68,11 @@ import { requestAlbums, requestTracks, requestArtists } from './../../Requests';
                 onKeyPress={(e) => handleEnter3(e)}
             />
         <Button>
-            <BsSearch onClick={() => requestTracks(search3, setTracks, setIsLoading3)}/>
+            <BsSearch onClick={() => requestTracks(search3, setTracks, setSearch3, setIsLoading3)}/>
         </Button>
+        <BsTrash id="clear" onClick={() => clearStuff(setSearch3, setTracks)}/>
         </div>
+
         <div className="showcase">
             {isLoading3 ? <Loading/> : <TracksContainer tracks = {tracks}/>}
         </div>

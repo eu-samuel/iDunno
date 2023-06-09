@@ -21,15 +21,15 @@ export const MainContainer = () => {
   const [isLoading3, setIsLoading3] = useState(false)
 
   const handleEnter1 = (e) => {
-    if(e.key === 'Enter') {requestArtists(search1, setArtists, setIsLoading1)}
+    if(e.key === 'Enter') {requestArtists(search1, setArtists, setSearch1, setIsLoading1)}
   }
 
   const handleEnter2 = (e) => {
-    if(e.key === 'Enter') {requestAlbums(search2, setAlbums, setIsLoading2)}
+    if(e.key === 'Enter') {requestAlbums(search2, setAlbums, setSearch2, setIsLoading2)}
   }
 
   const handleEnter3 = (e) => {
-    if(e.key === 'Enter') {requestTracks(search3, setTracks, setIsLoading3)}
+    if(e.key === 'Enter') {requestTracks(search3, setTracks, setSearch3, setIsLoading3)}
   }
 
   const searches = [search1, setSearch1, search2, setSearch2, search3, setSearch3]

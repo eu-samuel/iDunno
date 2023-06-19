@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const MainStyle = styled.section`
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 4vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
-  min-height: 80vh;
-  padding-bottom: 2vh;
-`;
-
 export const Button = styled.button`
     color: #302f2f;
     font-weight: 700;
@@ -49,4 +37,11 @@ export const Input = styled.input`
       position: relative;
       left: 3vw;
     }
+`
+
+export const Logo = styled.div`
+    position: absolute;
+    top: 10vh;
+    left: 18vw;
+    img{width: 70%;}
 `

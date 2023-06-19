@@ -1,4 +1,4 @@
-import { ShowcaseStyle } from "../../Styles/ShowCaseStyle"
+import { ShowcaseStyle } from "./Styles"
 import { ArtistsContainer, AlbumsContainer, TracksContainer } from "./Containers";
 import { Loading } from '../Showcase/IsLoading';
 import { Input, Button } from "../../Styles/MainStyle";

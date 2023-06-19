@@ -1,4 +1,4 @@
-import { Image, Card, Spotify} from "../../Styles/ShowCaseStyle"
+import { Image, Card, Spotify} from "./Styles"
 import DefaultArtist from '../../assets/defaultpic.png'
 import DefaultMusic from '../../assets/defaultmusic.png'
 import Btn from '../../assets/button.png'

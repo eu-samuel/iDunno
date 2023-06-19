@@ -4,8 +4,7 @@
   font-weight: 400;
   text-align: center;
   color-scheme: light dark;
-  background: linear-gradient(180deg, rgb(34, 35, 34) 0%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%);
-  font-synthesis: none;
+  background: rgb(244,243,241);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

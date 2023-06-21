@@ -1,7 +1,7 @@
 import React from 'react';
 import { HomePage } from "./Style";
-import Girl from '../../assets/Characters/Girl.png'
-import logo from '../../assets/logo.png'
+import Girl from '../../Images/Characters/Girl.png'
+import logo from '../../Images/Components/logo.png'
 import { Logo } from '../../Styles/MainStyle';
 import { Bar } from '../../Components/Bar/Bar';
 import { Footer } from '../../Components/Footer/Footer';

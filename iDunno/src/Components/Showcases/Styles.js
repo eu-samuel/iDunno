@@ -1,39 +1,41 @@
 import  styled  from 'styled-components';
 
+export const SearchBar = styled.div`
+
+        display: flex; 
+        margin-left: 1vw;
+        font-size: 20px;
+        align-items: center;
+        position: absolute;
+        top: 15vh;
+        left: 50vw;
+
+        #clear{
+            cursor: pointer;    
+            position: relative;
+            right: .5vw;
+        }
+
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+    
+        margin-left: 0;
+        justify-content: center;
+        #clear{  right: 2vw;}
+}
+
+`
+
 export const ShowcaseStyle = styled.div`
 
     display: flex;
     gap: 1.5vw;
     
-    .showcase{
-        font-family: "Montserrat", Helvetica, sans-serif;
-        background: #232323;
-        align-items: center;
-        padding: 1rem;
-        border-radius: 10px;
-        width: 28vw;
-        min-height: 60vh;
-        margin: 0 auto;
-        margin-top: 1vw;
-    }
+
     .container{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .search{
-        display: flex; 
-        margin-left: 1vw;
-        font-size: 20px;
-        align-items: center;
-        #clear{
-        cursor: pointer;    
-        position: relative;
-        right: .5vw;}
-
-    }
-
 
     @media only screen and (min-width : 320px) and (max-width : 480px) {
     
@@ -59,6 +61,18 @@ export const ShowcaseStyle = styled.div`
        
 `
 
+export const Showcase = styled.div`
+        font-family: "Montserrat", Helvetica, sans-serif;
+        background: #232323;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 28vw;
+        min-height: 60vh;
+        margin: 0 auto;
+        margin-top: 1vw;
+    
+`
 export const Image = styled.div`
 
         background-image: url(${(props) => props.image});

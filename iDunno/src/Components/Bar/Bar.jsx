@@ -1,25 +1,36 @@
 import * as BsIcons from 'react-icons/bs';
-import logo from '../../assets/logo2.png'
+import logo from '../../Images/Components/logo2.png'
 import { NavBar } from "./Style";
+import { useNavigate } from 'react-router-dom';
+import { goToAlbums, goToHome, goToArtists, goToTracks } from '../../Routes/Coordinators';
 
 export const Bar = () => {
+
+    const navigate = useNavigate()
+
     return (
     <NavBar>
         <img src={logo} alt="idunno" id="logo"/>
         <ul>
-            <li>
+        <li onClick={() => goToHome(navigate)}>
+            <span>
+                <BsIcons.BsFillHouseDoorFill id="icon"/>
+                Home
+            </span>
+        </li>
+            <li onClick={() => goToArtists(navigate)}>
                 <span>
                     <BsIcons.BsPerson id="icon"/>
                     Artists
                 </span>
             </li>
-            <li>
+            <li onClick={() => goToAlbums(navigate)}>
                 <span>
                     <BsIcons.BsJournalAlbum id="icon"/>
                     Albums
                 </span>
             </li>
-            <li>
+            <li onClick={() => goToTracks(navigate)}>
                 <span> 
                     <BsIcons.BsMusicNote id="icon"/>
                     Tracks

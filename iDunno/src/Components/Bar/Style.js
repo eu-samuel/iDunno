@@ -6,6 +6,7 @@ export const NavBar = styled.nav`
     height: 100vh;
     background: #007BA7;
     position: absolute;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +40,7 @@ export const NavBar = styled.nav`
         align-items: center;
         gap: 1vw;
         position: relative;
-        left: 1.5vw;
+        left: 1.2vw;
     }
 
     #logo{

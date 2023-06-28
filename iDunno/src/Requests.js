@@ -1,7 +1,8 @@
 import axios from 'axios';
-import { amount } from './States';
 
-export const requestArtists = async (artist, setState, setInput, isLoading) => {
+
+export const requestArtists = async (artist, setState, setInput, isLoading, amount) => {
+
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',
@@ -30,7 +31,8 @@ export const requestArtists = async (artist, setState, setInput, isLoading) => {
     }
   }
 
-  export const requestTracks = async (track, setState, setInput, isLoading) => {
+  export const requestTracks = async (track, setState, setInput, isLoading, amount) => {
+
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',
@@ -59,7 +61,8 @@ export const requestArtists = async (artist, setState, setInput, isLoading) => {
     }
   }
 
-  export const requestAlbums = async (album, setState, setInput, isLoading) => {
+  export const requestAlbums = async (album, setState, setInput, isLoading, amount) => {
+
     const options = {
       method: 'GET',
       url: 'https://spotify23.p.rapidapi.com/search/',

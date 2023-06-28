@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledLoader } from "./Styles";
-import Load from '../../Images/Components/loading.gif'
+import Load from '../../Images/loading.gif'
 
 export const Loader = () => {
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useColor } from "react-color-palette"
 
 export const useContent = () => {
 
@@ -27,6 +28,13 @@ const handleEnter3 = (e) => {
   if (e.key === 'Enter') { requestTracks(search, setTracks, setSearch, setIsLoading) }
 }
 
-export const [amount, setAmount] = useState(50)
+export const useSettings  = () =>{
+
+  const [amount, setAmount] = useState(50)
+  const [color, setColor] = useColor("hex", "#16A347")
+
+  return {amount, setAmount, color, setColor}
+
+  } 
 
 

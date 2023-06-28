@@ -1,14 +1,9 @@
 import  styled  from 'styled-components';
 
 export const MainCase = styled.div`
-
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.5vw;
-
-
-
-
 `
 
 export const Showcase = styled.div`
@@ -18,7 +13,7 @@ export const Showcase = styled.div`
         margin: 0 auto;
         width: 75vw;
         margin-right: 8vw;
-        margin-top: 13vh;
+        margin-top: 12vh;
         padding-bottom: 10vh;
     
 `

@@ -1,26 +1,48 @@
 import React from 'react';
+import Boy from '../../Images/Boy.png'
+import logo from '../../Images/logo.png';
+import demo from '../../Images/demo.jpg';
 import { HomePage } from "./Style";
-import Girl from '../../Images/Characters/Girl.png'
-import logo from '../../Images/Components/logo.png'
 import { Logo } from '../../Styles/MainStyle';
 import { Bar } from '../../Components/Bar/Bar';
-
+import { useSettings } from '../../States';
+import { FaGithub } from 'react-icons/fa';
 
 export const Home = () => {
 
+  const { amount, setAmount, color, setColor } = useSettings()
+
   return (
     <>
-      <HomePage>
+      <Bar
+        amount={amount}
+        setAmount={setAmount}
+        color={color}
+        setColor={setColor} />
+
+      <HomePage> 
+      <div className="content">
+      <div className="invite">
         <Logo>
-          <img src={logo} alt="idunno"/>
+          <img src={logo} id="logo" alt="idunno"/>
           </Logo>
-      <img src={Girl} alt="girl" id="girl" />
         <p>Discover new music with iDunno. 
           Find here your new addiction, it can be an artist, 
           a specific album or a single track!
         </p>
-        <Bar/>
+        <img src={demo} alt="demonstration" id="demo"/>
+        </div>
+        <div className="char">
+        <img src={Boy} alt="boy" id="boy" />
+        </div>
+        </div>
+        <div className="credits">
+          <FaGithub id="git" />
+          <span id="credits">Made by Samuel Pereira</span>
+        </div>
       </HomePage>
     </>
   );
 };
+
+

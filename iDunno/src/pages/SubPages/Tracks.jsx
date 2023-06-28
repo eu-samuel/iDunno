@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../../Images/Components/logo.png';
+import logo from '../../Images/logo.png';
 import { Showcase } from '../../Components/Showcases/Styles';
 import { Page } from "../Style";
 import { Bar } from '../../Components/Bar/Bar';
 import { TracksCase } from '../../Components/Showcases/TracksCase'
-import { useContent } from '../../States';
+import { useContent, useSettings } from '../../States';
 import { Loader } from '../../Components/Loader/Loader';
 import { requestTracks } from '../../Requests';
 import { SearchBar } from '../../Components/Bar/Styles';
@@ -15,10 +15,17 @@ import { FaGithub } from 'react-icons/fa';
 export const Tracks = () => {
 
   const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff } = useContent()
+  const { amount, setAmount, color, setColor } = useSettings()
+
+
 
   return (
     <>
-      <Bar />
+      <Bar
+        amount={amount}
+        setAmount={setAmount}
+        color={color}
+        setColor={setColor} />
 
       <Page>
         <div className="head">
@@ -31,7 +38,7 @@ export const Tracks = () => {
             // onKeyPress={(e) => handleEnter(e)}
             />
             <Button>
-              <BsSearch onClick={() => requestTracks(search, setContent, setSearch, setIsLoading)} />
+              <BsSearch onClick={() => requestTracks(search, setContent, setSearch, setIsLoading, amount)} />
             </Button>
             <BsTrash id="clear" onClick={() => clearStuff()} />
           </SearchBar>

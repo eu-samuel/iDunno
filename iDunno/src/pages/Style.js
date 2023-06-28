@@ -5,14 +5,16 @@ export const Page = styled.section`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  min-height: 100vh;
-  padding-bottom: 4vh;
+  min-height: 98vh;
+  padding-bottom: 1vh;
   color: white;
+
+  .head, .credits{display: flex};
+  p, .head, .credits {position: relative;}
 
   p{
     text-align: left;
     width: 35%;
-    position: relative;
     right: 12vw;
     bottom: 10vh;
     font-size: 25px;
@@ -20,9 +22,7 @@ export const Page = styled.section`
   }
 
   .head{
-    display: flex;
     width: 50vw;
-    position: relative;
     gap: 3vw;
     left: 20vw;
     top: 8vh;
@@ -30,10 +30,9 @@ export const Page = styled.section`
   }
 
   .credits{
-    display: flex;
+    top: -4vh;
     img{width: 8%;}
     justify-content: center;
-    color: white;
     align-items: center;
     gap: 2vw;
     #git{font-size: 30px;}

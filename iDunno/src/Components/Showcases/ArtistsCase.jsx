@@ -1,5 +1,5 @@
 import { MainCase, Image, Card } from "./Styles"
-import DefaultArtist from '../../Images/Components/defaultpic.png'
+import DefaultArtist from '../../Images/defaultpic.png'
 
 
 export const ArtistsCase = (props) => {
@@ -11,11 +11,11 @@ export const ArtistsCase = (props) => {
     }
     return (
         <MainCase>
-            {props.content.length > 0 ? props.content.map((artist) => {
+            {props.content.length > 0 ? props.content.map((artist, index) => {
                 return (
                     <Card>
                         <a href={artist.data.uri}>
-                            <div className="card">
+                            <div className="card" key={index}>
                                 {defaultArtist(artist)}
                                 <span>{artist.data.profile.name}</span>
                             </div>

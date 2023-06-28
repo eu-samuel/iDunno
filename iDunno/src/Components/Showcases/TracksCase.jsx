@@ -1,5 +1,5 @@
 import { Image, Card } from "./Styles"
-import DefaultMusic from '../../Images/Components/defaultmusic.png'
+import DefaultMusic from '../../Images/defaultmusic.png'
 import { useContent } from "../../States"
 
 export const TracksCase = () => {
@@ -15,12 +15,12 @@ export const TracksCase = () => {
 
     return (
         <>
-            {content.length > 0 ? content.map((track) => {
+            {content.length > 0 ? content.map((track, index) => {
                 return (
                     <Card>
                         <Card>
                             <a href={track.data.uri}>
-                                <div className="card">
+                                <div className="card" key={index}>
                                     {defaultTrack(track)}
                                     <span>{track.data.artists.items[0].profile.name} - {track.data.name}</span>
                                 </div>

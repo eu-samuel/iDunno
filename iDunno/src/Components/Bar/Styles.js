@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const NavBar = styled.nav`
 
     width: 10vw;
-    height: 100vh;
-    background: #007BA7;
-    position: absolute;
+    min-height: 100vh;
+    background: #16A347;
+    position: fixed;
     font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,37 @@ export const NavBar = styled.nav`
 
     #icon{font-size: 20px;}
     li:active{transform: scale(0.92)}
-    li:hover{background: #0D98BA;}
+    li:hover{background: #1ED760;}
+
+`
+
+
+export const SearchBar = styled.div`
+
+        display: flex; 
+        margin-left: 1vw;
+        font-size: 20px;
+        align-items: center;
+        #clear{
+            cursor: pointer;    
+            background-color: #1ED760;
+            color: white;
+            width: 2.5vh;
+            padding: .5rem;
+            border-radius: 10px;
+            height: 2.5vh;
+            position: relative;
+            right: .5vw;
+        }
+        #clear:active{
+            transform: scale(0.95);
+        }
+
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+    
+        margin-left: 0;
+        justify-content: center;
+        #clear{  right: 2vw;}
+}
 
 `

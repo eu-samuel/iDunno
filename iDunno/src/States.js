@@ -6,7 +6,12 @@ export const useContent = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [content, setContent] = useState([])
 
-    return {search, setSearch, content, setContent, isLoading, setIsLoading}
+    const clearStuff = () => {
+      setContent("")
+      setSearch("")
+    }
+
+    return {search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff}
 }
 
 
@@ -21,4 +26,7 @@ const handleEnter2 = (e) => {
 const handleEnter3 = (e) => {
   if (e.key === 'Enter') { requestTracks(search, setTracks, setSearch, setIsLoading) }
 }
+
+export const [amount, setAmount] = useState(50)
+
 

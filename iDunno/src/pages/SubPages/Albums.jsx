@@ -1,37 +1,53 @@
 import React from 'react';
-import Boy from '../../Images/Characters/Boy.png'
-import logo from '../../Images/Components/logo.png'
+import logo from '../../Images/Components/logo.png';
+import { Showcase } from '../../Components/Showcases/Styles';
 import { Page } from "../Style";
-import { Logo } from '../../Styles/MainStyle';
 import { Bar } from '../../Components/Bar/Bar';
-import { Footer } from '../../Components/Footer/Footer';
 import { AlbumsCase } from '../../Components/Showcases/AlbumsCase'
-import { Search } from '../../Components/Bar/SearchBar';
 import { useContent } from '../../States';
 import { Loader } from '../../Components/Loader/Loader';
 import { requestAlbums } from '../../Requests';
+import { SearchBar } from '../../Components/Bar/Styles';
+import { Input, Button } from "../../Styles/MainStyle";
+import { BsTrash, BsSearch } from 'react-icons/bs'
+import { FaGithub } from 'react-icons/fa';
 
 export const Albums = () => {
 
-  const {search, setSearch, content, setContent, isLoading, setIsLoading} = useContent()
+  const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff} = useContent()
 
   return (
     <>
-    <Bar/>
+      <Bar />
 
       <Page>
-        <Logo><img src={logo} alt="idunno"/></Logo>
-      <Search
-        text="Busque seu álbum aqui"
-        request={requestAlbums}
-      />
-      <div className="showcase">
-            {isLoading ? <Loader/> : <AlbumsCase content = {content}/>}
-      </div>
-      
+        <div className="head">
+          <img src={logo} alt="idunno" />
+          <SearchBar>
+            <Input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder={"Busque seus álbuns aqui."}
+            // onKeyPress={(e) => handleEnter(e)}
+            />
+            <Button>
+              <BsSearch onClick={() => requestAlbums(search, setContent, setSearch, setIsLoading)} />
+            </Button>
+            <BsTrash id="clear" onClick={() => clearStuff()} />
+          </SearchBar>
+        </div>
+        <Showcase>
+          Click on the card for being redirected to respective spotify's page.
+          <br/>
+          <br/>
+          {isLoading ? <Loader /> : <AlbumsCase content={content} />}
+        </Showcase>
+
+        <div className="credits">
+          <FaGithub id="git" />
+          <span id="credits">Made by Samuel Pereira</span>
+        </div>
       </Page>
-    
-     <Footer/>
     </>
   );
 };

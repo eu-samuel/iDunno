@@ -4,11 +4,12 @@
   font-weight: 400;
   text-align: center;
   color-scheme: light dark;
-  background: rgb(244,243,241);
+  background: #121212;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -20,4 +21,5 @@ body{
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  min-height: 100vh;
 }

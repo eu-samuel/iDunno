@@ -1,85 +1,34 @@
 import  styled  from 'styled-components';
 
-export const SearchBar = styled.div`
+export const MainCase = styled.div`
 
-        display: flex; 
-        margin-left: 1vw;
-        font-size: 20px;
-        align-items: center;
-        position: absolute;
-        top: 15vh;
-        left: 50vw;
-
-        #clear{
-            cursor: pointer;    
-            position: relative;
-            right: .5vw;
-        }
-
-        @media only screen and (min-width : 320px) and (max-width : 480px) {
-    
-        margin-left: 0;
-        justify-content: center;
-        #clear{  right: 2vw;}
-}
-
-`
-
-export const ShowcaseStyle = styled.div`
-
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5vw;
-    
 
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
-    
-    gap: 5vh;
-    flex-direction: column;
-    .showcase{
-        width: 82vw;
-        min-height: 20vh;
-    }
-    .container{gap: 2vh;}
-    .search{
-        display: flex; 
-        margin-left: 0;
-        justify-content: center;
-        font-size: 20px;
-        align-items: center;
-        #clear{
-        cursor: pointer;    
-        right: 2vw;}
 
-    }
-}
-       
+
 `
 
 export const Showcase = styled.div`
         font-family: "Montserrat", Helvetica, sans-serif;
-        background: #232323;
         align-items: center;
-        padding: 1rem;
-        border-radius: 10px;
-        width: 28vw;
         min-height: 60vh;
         margin: 0 auto;
-        margin-top: 1vw;
+        width: 75vw;
+        margin-right: 8vw;
+        margin-top: 13vh;
+        padding-bottom: 10vh;
     
 `
 export const Image = styled.div`
 
         background-image: url(${(props) => props.image});
         background-size: cover;
-        width: 3vw;
-        height: 3vw;
-        border-radius: 2rem;
+        width: 11vw;
+        height: 22vh;
+        border-radius: 6rem;
 
         @media only screen and (min-width : 320px) and (max-width : 480px) {
             display: none;
@@ -88,21 +37,32 @@ export const Image = styled.div`
 
 export const Card = styled.div`
     
-        width: 25vw;
-        height: 5vh;
+        .card {
+        width: 12vw;
+        height: 27vh;
         border-radius: 8px;
-        background-color: #171717;
+        background-color: #181818;
         color: white;
-        margin: 0 auto;
         display: flex;
-        gap: 5vh;
+        flex-direction: column;
+        gap: 1vh;
         margin-top: 1vh;
-        font-size: .9rem;
+        font-size: .8rem;
         padding: 1rem;
         align-items: center;
-        font-weight: 700;
-        span{width: 10vw;}
+        font-weight: 600;
+        cursor:pointer;
+    }
 
+    .card:hover{background-color: #252525;}
+
+    a{text-decoration: none;}
+
+    #spotify{
+        width: 3vw;
+        position: absolute;
+        height: 6vh;
+    }
 
     @media only screen and (min-width : 320px) and (max-width : 480px) {
         
@@ -114,25 +74,5 @@ export const Card = styled.div`
             text-overflow:    ellipsis;}
             
 }
-`
 
-export const Spotify = styled.div`
-
-        background-image:url(${(props) => props.image});
-        background-size:cover;
-        width: 8vw; 
-        height: 6vh;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        :active{transform: scale(0.97)}
-
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
-
-        background-image:url(${(props) => props.mobile});
-        width: 9vw; 
-        height: 4.4vh;
-        margin-left: 12vw;
-    }
-    
 `

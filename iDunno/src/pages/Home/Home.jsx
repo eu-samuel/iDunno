@@ -4,7 +4,6 @@ import Girl from '../../Images/Characters/Girl.png'
 import logo from '../../Images/Components/logo.png'
 import { Logo } from '../../Styles/MainStyle';
 import { Bar } from '../../Components/Bar/Bar';
-import { Footer } from '../../Components/Footer/Footer';
 
 
 export const Home = () => {
@@ -22,7 +21,6 @@ export const Home = () => {
         </p>
         <Bar/>
       </HomePage>
-     <Footer/>
     </>
   );
 };

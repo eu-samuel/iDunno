@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { amount } from './States';
 
 export const requestArtists = async (artist, setState, setInput, isLoading) => {
     const options = {
@@ -8,7 +9,7 @@ export const requestArtists = async (artist, setState, setInput, isLoading) => {
         q: artist,
         type: "artists",
         offset: '0',
-        limit: 25,
+        limit: amount,
         numberOfTopResults: '5'
       },
       headers: {
@@ -37,7 +38,7 @@ export const requestArtists = async (artist, setState, setInput, isLoading) => {
         q: track,
         type: "tracks",
         offset: '0',
-        limit: 25,
+        limit: amount,
         numberOfTopResults: '5'
       },
       headers: {
@@ -66,7 +67,7 @@ export const requestArtists = async (artist, setState, setInput, isLoading) => {
         q: album,
         type: "albums",
         offset: '0',
-        limit: 25,
+        limit: amount,
         numberOfTopResults: '5'
       },
       headers: {

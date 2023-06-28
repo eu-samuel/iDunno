@@ -1,6 +1,6 @@
 import * as BsIcons from 'react-icons/bs';
 import logo from '../../Images/Components/logo2.png'
-import { NavBar } from "./Style";
+import { NavBar } from "./Styles";
 import { useNavigate } from 'react-router-dom';
 import { goToAlbums, goToHome, goToArtists, goToTracks } from '../../Routes/Coordinators';
 

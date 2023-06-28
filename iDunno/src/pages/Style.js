@@ -4,11 +4,10 @@ export const Page = styled.section`
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #F4F3F1;
-  color: black;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 4vh;
+  color: white;
 
   p{
     text-align: left;
@@ -20,13 +19,23 @@ export const Page = styled.section`
     font-weight: 700;
   }
 
-  #boy{
-    width: 25%;
-    position: absolute;
-    top: 13vh;
-    left: 62vw;
-    transform: scale(-1, 1);
+  .head{
+    display: flex;
+    width: 50vw;
+    position: relative;
+    gap: 3vw;
+    left: 20vw;
+    top: 8vh;
+    img{width: 45%;}
   }
 
-
+  .credits{
+    display: flex;
+    img{width: 8%;}
+    justify-content: center;
+    color: white;
+    align-items: center;
+    gap: 2vw;
+    #git{font-size: 30px;}
+  }
 `;

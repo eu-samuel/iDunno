@@ -15,19 +15,6 @@ export const useContent = () => {
     return {search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff}
 }
 
-
-const handleEnter1 = (e) => {
-  if (e.key === 'Enter') { requestArtists(search, setArtists, setSearch, setIsLoading) }
-}
-
-const handleEnter2 = (e) => {
-  if (e.key === 'Enter') { requestAlbums(search, setAlbums, setSearch, setIsLoading) }
-}
-
-const handleEnter3 = (e) => {
-  if (e.key === 'Enter') { requestTracks(search, setTracks, setSearch, setIsLoading) }
-}
-
 export const useSettings  = () =>{
 
   const [amount, setAmount] = useState(50)
@@ -36,5 +23,7 @@ export const useSettings  = () =>{
   return {amount, setAmount, color, setColor}
 
   } 
+
+
 
 

@@ -11,7 +11,7 @@ export const ArtistsCase = (props) => {
     }
     return (
         <MainCase>
-            {props.content.length > 0 ? props.content.map((artist, index) => {
+            {props.content.length > 0 ? props.content.map((artist) => {
                 return (
                     <Card>
                         <a href={artist.data.uri}>

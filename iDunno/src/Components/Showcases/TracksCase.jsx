@@ -13,7 +13,7 @@ export const TracksCase = (props) => {
 
     return (
         <MainCase>
-            {props.content.length > 0 ? props.content.map((track, index) => {
+            {props.content.length > 0 ? props.content.map((track) => {
                 return (
                     <Card>
                         <Card>

@@ -18,6 +18,8 @@ export const Artists = () => {
   const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff } = useContent()
   const { amount, setAmount, color, setColor } = useSettings()
   
+  const pressEnter = (e) => {if (e.key === 'Enter') { requestArtists(search, setContent, setSearch, setIsLoading) }}
+
   return (
     <>
       <Bar
@@ -42,7 +44,7 @@ export const Artists = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={"Busque seus artistas aqui."}
-            // onKeyPress={(e) => handleEnter(e)}
+              onKeyPress={(e) => pressEnter(e)}
             />
             <Button>
               <BsSearch onClick={() => requestArtists(search, setContent, setSearch, setIsLoading, amount)} />

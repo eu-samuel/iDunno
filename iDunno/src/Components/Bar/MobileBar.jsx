@@ -46,7 +46,7 @@ export const MobileBar = (props) => {
                     Tracks
                 </span>
             </li>
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/5521990215170?text=Converse com o idealizador do iDunno."><li>
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/5521990215170?text=Talk with iDunno's creator."><li>
                 <span>
                     <BsIcons.BsWhatsapp id="icon"/>
                     Contact

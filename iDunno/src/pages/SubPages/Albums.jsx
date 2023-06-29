@@ -17,6 +17,8 @@ export const Albums = () => {
 
   const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff } = useContent()
   const { amount, setAmount, color, setColor } = useSettings()
+  
+  const pressEnter = (e) => {if (e.key === 'Enter') { requestAlbums(search, setContent, setSearch, setIsLoading) }}
 
   return (
     <>
@@ -41,7 +43,7 @@ export const Albums = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={"Busque seus álbuns aqui."}
-            // onKeyPress={(e) => handleEnter(e)}
+            onKeyPress={(e) => pressEnter(e)}
             />
             <Button>
               <BsSearch onClick={() => requestAlbums(search, setContent, setSearch, setIsLoading, amount)} />

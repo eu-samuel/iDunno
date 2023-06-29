@@ -18,7 +18,7 @@ export const Tracks = () => {
   const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff } = useContent()
   const { amount, setAmount, color, setColor } = useSettings()
 
-
+  const pressEnter = (e) => {if (e.key === 'Enter') { requestTracks(search, setContent, setSearch, setIsLoading) }}
 
   return (
     <>
@@ -44,7 +44,7 @@ export const Tracks = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={"Busque suas músicas aqui."}
-            // onKeyPress={(e) => handleEnter(e)}
+            onKeyPress={(e) => pressEnter(e)}
             />
             <Button>
               <BsSearch onClick={() => requestTracks(search, setContent, setSearch, setIsLoading, amount)} />

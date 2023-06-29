@@ -11,7 +11,7 @@ export const AlbumsCase = (props) => {
 
     return (
         <MainCase>
-            {props.content.length > 0 ? props.content.map((album, index) => {
+            {props.content.length > 0 ? props.content.map((album) => {
                 return (
                     <Card>
                         <a href={album.data.uri}>

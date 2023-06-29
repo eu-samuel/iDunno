@@ -1,8 +1,8 @@
-<img src="https://i.ibb.co/9yMnvjG/image.png" alt="iDunno-logo"></img>
+<img src="https://i.ibb.co/C6Xbypx/image.png" alt="iDunno-logo"></img>
 
 <h1>Sobre</h1>
 
-iDunno é um projeto feito em React.js através do consumo da Spotify API. Em uma única página, o usuário poderá conferir 25 artistas, álbuns ou músicas com base no que for pesquisado por ele em um dos três inputs disponíveis. Também é possível se redirecionar até a página do artista no site do Spotify ou programa/aplicativo caso o usuário tenha instalado em seu desktop/smartphone. O botão da lixeira irá limpar tanto o input específico quanto o container.
+iDunno é um projeto feito em React.js através do consumo da Spotify API. Entre suas páginas, o usuário poderá conferir inicialmente 50 artistas, álbuns ou músicas com base no que for pesquisado. Também é possível se redirecionar até a página do artista na plataforma de streaming musical "Spotify". O botão da lixeira irá limpar o input e zerar o container.
 
 O nome iDunno vem de "I don't know", frase em inglês que significa "eu não sei/não conheço". É uma referência a proposta do projeto em exibir novo conteúdo musical do ponto de vista de cada usuário.
 
@@ -12,27 +12,30 @@ A aplicação poderá ser acessada pelo usuário através da plataforma surge, s
 
 <h1>Imagens</h1>
    
-<h3>Página simples</h3>
+<h3>Página Home</h3>
 
-<img src="https://i.ibb.co/RShxqDg/image.png" alt="iDunno-simple"></img>
+<img src="https://i.ibb.co/1MdNcwD/image.png" alt="iDunno-simple"></img>
 
-<h3>Artistas carregados</h3>
+<h3>Página de artistas</h3>
 
-<img src="https://i.ibb.co/KbzYK06/image.png" alt="iDunno-artists"></img>
+<img src="https://i.ibb.co/cwFNQvh/image.png" alt="iDunno-artists"></img>
 
-<h3>Álbuns carregados</h3>
+<h3>Página de álbuns</h3>
 
-<img src="https://i.ibb.co/VVCr55Q/image.png" alt="iDunno-albums"></img>
+<img src="https://i.ibb.co/grt04XW/image.png" alt="iDunno-albums"></img>
 
-<h3>Músicas carregadas</h3>
+<h3>Página de músicas</h3>
 
-<img src="https://i.ibb.co/6DwrNgg/image.png" alt="iDunno-tracks"></img>
+<img src="https://i.ibb.co/r5cR4rB/image.png" alt="iDunno-tracks"></img>
+
+<h1>Janela de personalização</h1>
+
+A janela de personalização, localizada na barra lateral, permite que o usuário defina o número de resultados a serem obtidos na próxima busca e a cor da barra lateral.
+<img src="https://i.ibb.co/hMWJFnZ/image.png" alt="iDunno-settings"/>
 
 <h1>Versão mobile </h1>
 
-A fim de melhorar a performance e visualização do projeto e manter o acesso do usuário às páginas no Spotify, as imagens dos artistas, álbuns e músicas foram removidas.
-
-<img src="https://i.ibb.co/VNV2Jg5/image.png" alt="iDunno-mobile"></img>
+<img src="https://i.ibb.co/hVMZHby/image.png" alt="iDunno-mobile"></img>
 
 Projeto feito por Samuel Pereira - Desenvolvedor front end.
 

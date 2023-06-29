@@ -10,16 +10,7 @@ export const Page = styled.section`
   color: white;
 
   .head, .credits{display: flex};
-  p, .head, .credits {position: relative;}
-
-  p{
-    text-align: left;
-    width: 35%;
-    right: 12vw;
-    bottom: 10vh;
-    font-size: 25px;
-    font-weight: 700;
-  }
+  .head, .credits {position: relative;}
 
   .head{
     width: 50vw;
@@ -36,5 +27,19 @@ export const Page = styled.section`
     align-items: center;
     gap: 2vw;
     #git{font-size: 30px;}
+  }
+
+  @media only screen and (min-width : 320px) and (max-width : 600px) {
+
+    .head{
+      width: 90vw;
+      align-items: center;
+      flex-direction: column;
+      left: 0vw;
+      top: 15vh;
+      img{width: 55%;}
+    }
+
+    .credits{top: 2vh;}
   }
 `;

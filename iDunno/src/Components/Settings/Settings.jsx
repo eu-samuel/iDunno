@@ -7,7 +7,7 @@ export const Settings = (props) => {
 
     return (
         <SettingsWindow color={props.color.hex}>
-            <div className={props.setts ? "on" : "off"}>
+            <div className={props.setts ? "on" : "off"} id={props.menu ? "mobile" : "mobile-off"}>
                 <div className="amount">
             <div className="input">
                 <span>Number of cards:</span>

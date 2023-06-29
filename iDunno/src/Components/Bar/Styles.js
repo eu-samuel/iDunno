@@ -13,10 +13,7 @@ export const NavBar = styled.nav`
     left: 0;
     z-index: 10;
 
-    ul, span, li, #logo{
-        position: relative;
-        display: flex;
-    }
+    ul, span, li, #logo{ position: relative; display: flex; }
     
     ul{
         margin-top: 10vh;
@@ -41,67 +38,92 @@ export const NavBar = styled.nav`
         left: 1vw;
     }
 
-    #logo{
-        width: 40%;
-        top: 5vh;
-    }
-
+    #logo{ width: 40%; top: 5vh; }
     #icon{font-size: 20px;}
     li:active{transform: scale(0.92)}
     li:hover{font-weight: 700;}
     a{text-decoration: none;}
+
+    @media only screen and (min-width : 320px) and (max-width : 600px) {display: none;}
+
+`
+
+export const MobileStyle = styled.nav`
+
+        display: none;
 
     @media only screen and (min-width : 320px) and (max-width : 600px) {
     
-   
-        width: 10vw;
-    min-height: 100vh;
-    background: ${(props) => props.color};
-    position: fixed;
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 0;
-    z-index: 10;
 
-    ul, span, li, #logo{
-        position: relative;
+        width: 100vw;
+        background: ${(props) => props.color};
+        position: fixed;
+        font-family: "Montserrat", sans-serif;
         display: flex;
-    }
-    
-    ul{
-        margin-top: 10vh;
         flex-direction: column;
-        gap: 3vh;
-        right: 3vw;
-        list-style: none
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        .head{height: 8vh; }
+        #close{
+            font-size: 25px;
+            left: 28vw;
+            cursor: pointer;
+        }
+
+        #close:active{transform: scale(0.96)}
+
+
+        .mobile-menu{
+            height: 100vh;
+            transition: 200ms;
+            ul, span, li, #close, .head{ position: relative; display: flex;}
+    
+        ul{
+            flex-direction: column;
+            gap: 2vh;
+            list-style: none;
+            top: 3vh;
+        }
+
+        li{
+            font-size: 5vw;
+            max-width: 10vw;
+            height: 8vh;
+            color: white;
+            cursor: pointer;
+            transition: 200ms;
+        }
+
+        .head{
+            align-items: center; 
+            justify-content: center;
+            gap: 10vw;
+            border-bottom: solid 1px white; 
+            
+        #logo{ width: 12%; margin-left: 6vw;} }
+        #icon{font-size: 25px;}
+        li:active{transform: scale(0.92)}
+        li:hover{font-weight: 700;}
+        a{text-decoration: none;}
+        span{align-items: center; gap: 5vw;}  
     }
 
-    li{
-        font-size: 1vw;
-        max-width: 10vw;
-        height: 8vh;
-        color: white;
-        cursor: pointer;
+    .mobile-bar{
         transition: 200ms;
+        height: 8.5vh;
+        ul{display: none}
+        .head{
+            display: flex;
+            align-items: center;
+            margin-top: .5vh;
+            justify-content: center;
+            gap: 10vw;
+            #logo{width: 12%}
+        }
     }
-
-    span{
-        align-items: center;
-        gap: 1vw;
-        left: 1vw;
-    }
-
-    #logo{
-        width: 40%;
-        top: 5vh;
-    }
-
-    #icon{font-size: 20px;}
-    li:active{transform: scale(0.92)}
-    li:hover{font-weight: 700;}
-    a{text-decoration: none;}
+}
 
 `
 
@@ -125,11 +147,11 @@ export const SearchBar = styled.div`
         }
         #clear:active{transform: scale(0.95);}
 
-        @media only screen and (min-width : 320px) and (max-width : 600px) {
+    @media only screen and (min-width : 320px) and (max-width : 600px) {
     
         margin-left: 0;
         justify-content: center;
         #clear{  right: 2vw;}
-}
+    }
 
 `

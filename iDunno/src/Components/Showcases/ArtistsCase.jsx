@@ -15,7 +15,7 @@ export const ArtistsCase = (props) => {
                 return (
                     <Card>
                         <a href={artist.data.uri}>
-                            <div className="card" key={index}>
+                            <div className="card" key={artist.data.uri}>
                                 {defaultArtist(artist)}
                                 <span>{artist.data.profile.name}</span>
                             </div>

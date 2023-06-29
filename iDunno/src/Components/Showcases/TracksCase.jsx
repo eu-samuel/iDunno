@@ -1,10 +1,8 @@
-import { Image, Card } from "./Styles"
+import { MainCase, Image, Card } from "./Styles"
 import DefaultMusic from '../../Images/defaultmusic.png'
-import { useContent } from "../../States"
 
-export const TracksCase = () => {
+export const TracksCase = (props) => {
 
-    const { search, setSearch, content, setContent, isLoading, setIsLoading } = useContent()
 
     const defaultTrack = (track) => {
         if (track.data.albumOfTrack.coverArt) {
@@ -14,13 +12,13 @@ export const TracksCase = () => {
 
 
     return (
-        <>
-            {content.length > 0 ? content.map((track, index) => {
+        <MainCase>
+            {props.content.length > 0 ? props.content.map((track, index) => {
                 return (
                     <Card>
                         <Card>
                             <a href={track.data.uri}>
-                                <div className="card" key={index}>
+                                <div className="card" key={track.data.uri}>
                                     {defaultTrack(track)}
                                     <span>{track.data.artists.items[0].profile.name} - {track.data.name}</span>
                                 </div>
@@ -30,6 +28,6 @@ export const TracksCase = () => {
                 )
             })
                 : ""}
-        </>
+        </MainCase>
     )
 }

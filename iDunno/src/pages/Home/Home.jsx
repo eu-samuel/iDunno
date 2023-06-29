@@ -3,8 +3,9 @@ import Boy from '../../Images/Boy.png'
 import logo from '../../Images/logo.png';
 import demo from '../../Images/demo.jpg';
 import { HomePage } from "./Style";
-import { Logo } from '../../Styles/MainStyle';
+import { Logo } from '../../Components/MainStyle';
 import { Bar } from '../../Components/Bar/Bar';
+import { MobileBar } from '../../Components/Bar/MobileBar';
 import { useSettings } from '../../States';
 import { FaGithub } from 'react-icons/fa';
 
@@ -19,6 +20,13 @@ export const Home = () => {
         setAmount={setAmount}
         color={color}
         setColor={setColor} />
+
+        <MobileBar
+          amount={amount}
+          setAmount={setAmount}
+          color={color}
+          setColor={setColor} 
+        />
 
       <HomePage> 
       <div className="content">
@@ -37,7 +45,7 @@ export const Home = () => {
         </div>
         </div>
         <div className="credits">
-          <FaGithub id="git" />
+          <a href="https://github.com/eu-samuel"><FaGithub id="git" /></a>
           <span id="credits">Made by Samuel Pereira</span>
         </div>
       </HomePage>

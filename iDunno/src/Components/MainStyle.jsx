@@ -33,9 +33,10 @@ export const Input = styled.input`
     
     @media only screen and (min-width : 320px) and (max-width : 480px) {
       padding-left: 3vw;
-      width: 75vw;
+      width: 65vw;
       position: relative;
       left: 3vw;
+      margin-left: 5vw;
     }
 `
 

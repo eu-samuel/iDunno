@@ -1,14 +1,15 @@
 import React from 'react';
 import logo from '../../Images/logo.png';
 import { Showcase } from '../../Components/Showcases/Styles';
-import { Page } from "../Style";
+import { Page } from "./Style";
 import { Bar } from '../../Components/Bar/Bar';
 import { ArtistsCase } from '../../Components/Showcases/ArtistsCase'
 import { useContent, useSettings } from '../../States';
 import { Loader } from '../../Components/Loader/Loader';
 import { requestArtists } from '../../Requests';
 import { SearchBar } from '../../Components/Bar/Styles';
-import { Input, Button } from "../../Styles/MainStyle";
+import { MobileBar } from '../../Components/Bar/MobileBar';
+import { Input, Button } from "../../Components/MainStyle";
 import { BsTrash, BsSearch } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa';
 
@@ -16,8 +17,6 @@ export const Artists = () => {
 
   const { search, setSearch, content, setContent, isLoading, setIsLoading, clearStuff } = useContent()
   const { amount, setAmount, color, setColor } = useSettings()
-
-  console.log(amount)
   
   return (
     <>
@@ -26,6 +25,14 @@ export const Artists = () => {
         setAmount={setAmount}
         color={color}
         setColor={setColor} />
+
+
+      <MobileBar
+        amount={amount}
+        setAmount={setAmount}
+        color={color}
+        setColor={setColor}
+      />
 
       <Page>
         <div className="head">
@@ -44,14 +51,14 @@ export const Artists = () => {
           </SearchBar>
         </div>
         <Showcase>
-          Click on the card for being redirected to respective spotify's page.
+        <span id="message">Click on the card for being redirected to respective spotify's page.</span>
           <br />
           <br />
           {isLoading ? <Loader /> : <ArtistsCase content={content} />}
         </Showcase>
 
         <div className="credits">
-          <FaGithub id="git" />
+          <a href="https://github.com/eu-samuel"><FaGithub id="git" /></a>
           <span id="credits">Made by Samuel Pereira</span>
         </div>
       </Page>

@@ -19,14 +19,10 @@ export const SettingsWindow = styled.div`
         border-bottom-right-radius: 10px;
     }
 
-    .on{
-        width:  20vw;
-        left: 15vw;
-    }
+    .on{ width:  20vw; left: 15vw; }
+    p{font-size: 11px;}
 
-    .off{
-        left: -30vw;
-        width: 0vw;
+    .off{ left: -30vw; width: 0vw;
         .amount{display: none}
         .colors{display: none}
     }
@@ -36,11 +32,9 @@ export const SettingsWindow = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        input{
-            text-align: center;
-            width: 2.5vw;
-        }
+        input{ text-align: center; width: 2.5vw; }
     }
+
     .input{
         display: flex;
         align-items:center;
@@ -54,6 +48,22 @@ export const SettingsWindow = styled.div`
         }
     }
 
+    
+    @media only screen and (min-width : 320px) and (max-width : 600px) {
+       
+    .on, .off{
+        font-size: 14px;
+        height: 32vh;
+        background: #333333;
+        border-radius: 8px;
+        top: 4vh;
+    }
+
+    .on{ width: 80vw; left: 0; }
+    #mobile-off{display: none}
+    .input{input{width: 10vw;}}
     p{font-size: 11px;}
+
+    }
 
 `

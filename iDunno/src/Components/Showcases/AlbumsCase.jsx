@@ -15,9 +15,9 @@ export const AlbumsCase = (props) => {
                 return (
                     <Card>
                         <a href={album.data.uri}>
-                            <div className="card" key={index}>
+                            <div className="card" key={album.data.name}>
                                 {defaultAlbum(album)}
-                                <span>{album.data.artists.items[0].profile.name} - {album.data.name}</span>
+                                <span> {album.data.name} - {album.data.artists.items[0].profile.name}</span>
                             </div>
                         </a>
                     </Card>
